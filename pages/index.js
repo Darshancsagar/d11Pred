@@ -13,7 +13,7 @@ export default function Home(props) {
     <div>
       <SEO
         title="Dream11  Prediction Website"
-        description="Get the latest Dream11 predictions and analysis on our website."
+        description="Get the latest Dream11 predictions and analysis on our website. Best Dream11 prediction online website. "
       />
       <HomeDetail posts={posts} />
     </div>
