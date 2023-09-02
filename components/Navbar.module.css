@@ -1,0 +1,81 @@
+/* components/navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #2c34c1;
+  color: white;
+  border-bottom: 2px solid violet;
+  box-shadow: 8px 6px 14px solid violet;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+}
+
+.navLinks Link {
+  text-decoration: none;
+  color: white;
+  margin: 0 1rem;
+}
+
+.burger {
+  cursor: pointer;
+  display: none; /* Hide the hamburger icon by default */
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px;
+  transition: all 0.3s ease; /* Added for smoother transition */
+}
+
+/* Adjust hamburger icon styles when open */
+.burger.open div.line {
+  background-color: #333; /* Change line color to match background */
+}
+
+/* Hamburger icon animation when open */
+.burger.open div.lineOpen:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.open div.lineOpen:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open div.lineOpen:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #3b36d3;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .navLinks.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block; /* Show the hamburger icon on mobile screens */
+  }
+}

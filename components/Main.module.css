@@ -1,0 +1,33 @@
+.head {
+  animation: headMove 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+  transform-style: preserve-3d;
+}
+
+.section1 {
+  display: flex;
+  background-color: rgb(50, 50, 132);
+  padding: 0 20px;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes headMove {
+  0% {
+    transform: translateX(-10%px) translateZ(0%) rotateY(0deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(050%) translateZ(10%) rotateY(360deg);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .section1 {
+    flex-direction: column;
+  }
+}
