@@ -12,12 +12,14 @@
   ); */
   padding: var(--size-8) 0;
 }
+
 .hero p {
   font-size: var(--size-6);
   color: var(--color-grey-100);
   width: 90%;
   max-width: 40rem;
   margin: auto;
+  color: var(--color-grey-900);
 }
 .image {
   width: 300px;

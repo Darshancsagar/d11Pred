@@ -5,11 +5,16 @@ import Navbar from "../components/Navbar";
 
 import HomeDetail from "../components/HomePage/HomeDetail";
 import { getAllMatches } from "../utils/DreamPredication";
+import SEO from "../components/SEO/Seo";
 
 export default function Home(props) {
   const { posts } = props;
   return (
     <div>
+      <SEO
+        title="Dream11  Prediction Website"
+        description="Get the latest Dream11 predictions and analysis on our website."
+      />
       <HomeDetail posts={posts} />
     </div>
   );

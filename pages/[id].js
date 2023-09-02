@@ -4,17 +4,25 @@ import fs from "fs";
 import path from "path";
 import ReactMarkdown from "react-markdown";
 import grayMatter from "gray-matter";
+import SEO from "../components/SEO/Seo";
 
 const MatchId = (props) => {
-  console.log(props);
-  return <MatchDetail matchContent={props.matchContent} />;
+  return (
+    <>
+      <SEO
+        title={`dream11 Prediction of-${props.data.title}`}
+        description={`dream11 Prediction of-${props.data}`}
+      />
+      <MatchDetail matchContent={props.matchContent} />
+    </>
+  );
 };
 
 export async function getStaticPaths() {
   const matchFiles = fs.readdirSync(
     path.join(process.cwd(), "dreamPredictions")
   );
-  console.log("mf", matchFiles);
+
   const paths = matchFiles.map((filename) => ({
     params: { id: path.parse(filename).name },
   }));
@@ -24,17 +32,21 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { id } = params;
-  console.log("id", params);
+
   const filePath = path.join(process.cwd(), "dreamPredictions", `${id}.md`);
   const fileContents = fs.readFileSync(filePath, "utf8");
 
   // Parse frontmatter and content using gray-matter
   const parsedContent = grayMatter(fileContents);
   const matchContent = parsedContent.content;
+  const data = parsedContent.data;
+  const isoDate = data.date?.toISOString();
+  const newData = { ...data, date: isoDate };
 
   return {
     props: {
-      matchContent,
+      matchContent: matchContent,
+      data: newData,
     },
   };
 }

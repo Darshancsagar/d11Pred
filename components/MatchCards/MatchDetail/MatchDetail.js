@@ -18,7 +18,6 @@ import { EffectCards } from "swiper/modules";
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
 
 function MatchDetailPage({ matchContent, data }) {
-  console.log("mm", data);
   const parsedContent = matter(matchContent);
   const imageUrls = [];
 
@@ -26,8 +25,6 @@ function MatchDetailPage({ matchContent, data }) {
   matchContent.replace(/!\[Image \d+\]\((.*?)\)/g, (match, imageUrl) => {
     imageUrls.push(imageUrl);
   });
-
-  console.log(imageUrls);
 
   return (
     <div>

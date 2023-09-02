@@ -5,6 +5,10 @@ import React from "react";
 function About() {
   return (
     <div>
+      <SEO
+        title="Dream11  Prediction Website"
+        description="Get the latest Dream11 predictions and analysis on our website."
+      />
       <h1>About Us</h1>
       <p>
         Welcome to the Prediction App! We are passionate about sports and have

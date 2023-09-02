@@ -11,7 +11,6 @@ export const getMatchById = (id) => {
 };
 
 export const getAllMatches = () => {
-    console.log("HI")
   const matchDirectory = path.join(process.cwd(), "dreamPredictions");
   const matchFiles = fs.readdirSync(matchDirectory);
 
@@ -20,9 +19,6 @@ export const getAllMatches = () => {
     const matchContent = fs.readFileSync(filePath, "utf8");
     const { content, data } = matter(matchContent);
 
-    console.log("File:", filename);
-    console.log("Content:", content);
-    console.log("Data:", data);
     return { content, data };
   });
 
