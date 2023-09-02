@@ -32,7 +32,7 @@ function About() {
       <h2>Contact Us</h2>
       <p>
         We value your feedback and suggestions. If you have any questions or
-        comments, please don't hesitate to <a href="/contact">contact us</a>.
+        comments, please don&apos;t hesitate to contact us.
       </p>
     </div>
   );
