@@ -39,6 +39,7 @@ function About() {
         We value your feedback and suggestions. If you have any questions or
         comments, please don&apos;t hesitate to contact us.
       </p>
+      <h3>We will upadte this website soon.</h3>
     </div>
   );
 }
