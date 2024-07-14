@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.dream11prediction.co.in/
+
+# Sitemaps
+Sitemap: https://www.dream11prediction.co.in/sitemap.xml
