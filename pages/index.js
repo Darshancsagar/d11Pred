@@ -10,14 +10,19 @@ import SEO from "../components/SEO/Seo";
 export default function Home(props) {
   const { posts } = props;
   return (
+    <>
+    <Head>
+     <meta name="google-site-verification" content="qfVZM2DhpHwX-Wvce0r1ZjANhQMCEyTWl-XX3rxy1_Q" />
+    </Head>
     <div>
       <SEO
         title="Dream11  Prediction Website"
         description="Get the latest Dream11 predictions and analysis on our website. Best Dream11 prediction online website. "
       />
-          <meta name="google-site-verification" content="qfVZM2DhpHwX-Wvce0r1ZjANhQMCEyTWl-XX3rxy1_Q" />
+         
       <HomeDetail posts={posts} />
     </div>
+          </>
   );
 }
 
